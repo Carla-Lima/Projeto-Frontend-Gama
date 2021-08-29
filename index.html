@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js" ></script>   
+    <script src="axios.js"></script> 
+    <title>.: Recrutamento :.</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="gradient">JobsNET</h1>
+        <h2>Cadastre seu currículo.</h2>
+    </div><br>
+    <main>
+        <form action="">
+            <h3>Dados Pessoais</h5>
+                <div id="dadosp">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" size="45" id="nome" required>
+                    <label for="nome-social">Nome Social</label>
+                    <input type="text" size="25" id="nomeSocial"><br><br>
+                    <label for="aniversario">Data de Nascimento *</label>
+                    <input type="date" id="aniversario" required>
+                    <label for="profissao">Profissão *</label>
+                    <input type="text" size="25" id="profissao" required><br><br>
+                    <label for="estadoCivil">Estado Civil</label>
+                    <select name="estadoCivil" id="estadoCivil"">
+            <option value=" Selecione"></option>
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Separado">Separado</option>
+                    </select>
+                    <label for="genero">Gênero</label>
+                    <select name="genero" id="genero">
+                        <option value="Selecione"></option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Outro">Outro</option>
+                        <option value="Nao-Binario">Não Binário</option>
+                        <option value="Prefiro-nao-responder">Prefiro não responder</option>
+                    </select>
+                    <label for="raça">Raça</label>
+                    <select name="raça" id="raça">
+                        <option value="Selecione"></option>
+                        <option value="Preta">Preta</option>
+                        <option value="Parda">Parda</option>
+                        <option value="Branca">Branca</option>
+                        <option value="Amarela">Amarela</option>
+                        <option value="Indigena">Indígena</option>
+                        <option value="Outra">Outra</option>
+                        <option value="Prefiro-nao-responder">Prefiro não responder</option>
+                    </select><br><br>
+                    <label for="pcd">Você quer se candidatar para a vaga como Pessoa com Deficiência?</label><br>
+                    <div id="pcd">
+                        <input type="radio" id="sim" name="pcd" value="sim">
+                        <label for="sim" id="simnao">Sim</label>
+                        <input type="radio" id="nao" name="pcd" value="nao">
+                        <label for="nao" id="simnao">Não</label><br><br>
+                    </div>
+                </div>
+
+                <h3>Endereço</h3>
+                <div id="endereco">
+                    <label for="cep">CEP *</label>
+                    <input type="text" id="cep" size="8" required>
+                    <label for="bairro">Bairro *</label>
+                    <input type="text" id="bairro" required>
+                    <label for="cidade">Cidade *</label>
+                    <input type="text" id="cidade" required>
+                    <label for="uf">Estado *</label>
+                    <input type="text" id="uf" size="2" required><br><br>
+                    <label for="logradouro">Logradouro *</label>
+                    <input type="text" id="logradouro" size="35" required>
+                    <label for="numero">Número *</label>
+                    <input type="text" size="5" id="numero" required>
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento"><br><br>
+                </div>
+
+                <h3>Contato</h3>
+                <div id="contato">
+                    <label for="phone">Celular *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="00 99999-9999" size="11" required>
+                    <label for="phone2">Telefone Fixo</label>
+                    <input type="tel" id="phone2" name="phone" placeholder="00 9999-9999"
+                     size="10">
+                    <label for="email">Digite seu email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ex.: seuemail@email.com" size="30"><br><br>
+                </div>
+
+                <h3>Documentos</h3>
+                <div id="documentos">
+                    <label for="identidade">Identidade *</label>
+                    <input type="text" id="identidade" name="Identidade" size="15" required>
+                    <label for="CPF">CPF *</label>
+                    <input type="text" id="CPF" name="CPF" size="11" required>
+                    <label for="cargo">Cargo Pretendido</label>
+                    <input type="text" size="20" id="cargo"><br><br>
+                    <label for="veiculo">Possui veiculo</label>
+                    <select name="veiculo" id="veiculo">
+                        <option value="Selecione"></option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                    <label for="habilitacao">Possui habilitação</label>
+                    <select name="habilitacao" id="habilitacao">
+                        <option value="Selecione"></option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select><br><br>
+                    <input type="submit" value="Enviar" id="enviar" onclick="{() => createCandidate()}">
+                </div>
+        </form>
+    </main>
+    <script src="main.js"></script>
+    <script src="axios.js"></script>
+</body>
+
+</html>
